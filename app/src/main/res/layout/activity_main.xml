@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.codewarrior928.tourguideapp.MainActivityMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/outdoors"
+        style="@style/CityAspectStyle"
+        android:text="Outdoors"
+        android:background="@color/colorOutdoorActivity"
+        />
+    <TextView
+        android:id="@+id/attractions"
+        style="@style/CityAspectStyle"
+        android:text="Attractions"
+        android:background="@color/colorAttractionActivity"
+        />
+    <TextView
+        android:id="@+id/history"
+        style="@style/CityAspectStyle"
+        android:text="History"
+        android:background="@color/colorHistoryActivity"
+        />
+
+</LinearLayout>
