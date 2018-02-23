@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivityMain"
-            android:label="Tour Guide Application">
+        <activity android:name=".MainActivity"
+            android:label="Tour Guide App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -18,32 +18,41 @@
         </activity>
         <activity android:name=".OutdoorsActivity"
             android:label="Outdoors"
-            android:parentActivityName=".MainActivityMain">
+            android:parentActivityName=".MainActivity">
             <!-- Parent activity meta data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivityMain"
+                android:value=".MainActivity"
             />
         </activity>
         <activity
             android:name=".NeighborhoodsActivity"
             android:label="Attractions"
-            android:parentActivityName=".MainActivityMain">
+            android:parentActivityName=".MainActivity">
             <!-- Parent activity meta data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivityMain"
+                android:value=".MainActivity"
             />
         </activity>
         />
         <activity
             android:name=".HistoryActivity"
             android:label="History"
-            android:parentActivityName=".MainActivityMain">
+            android:parentActivityName=".MainActivity">
             <!-- Parent activity meta data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivityMain"
+                android:value=".MainActivity"
+                />
+        </activity>
+        <activity android:name=".OutdoorFragmentActivity"
+            android:label="Fragment Act"
+            android:parentActivityName=".OutdoorsActivity">
+            <!-- Parent activity meta data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OutdoorsActivity"
                 />
         </activity>
     </application>

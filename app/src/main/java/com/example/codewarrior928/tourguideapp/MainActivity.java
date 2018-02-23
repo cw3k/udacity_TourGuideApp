@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivityMain extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class MainActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Creating intent to go to outdoors activity
-                Intent outdoorsIntent = new Intent(MainActivityMain.this, OutdoorsActivity.class);
+                Intent outdoorsIntent = new Intent(MainActivity.this, OutdoorsActivity.class);
 
                 // Executing intent
                 startActivity(outdoorsIntent);
@@ -36,7 +36,7 @@ public class MainActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Creating intent to go to outdoors activity
-                Intent attractionsIntent = new Intent(MainActivityMain.this, NeighborhoodsActivity.class);
+                Intent attractionsIntent = new Intent(MainActivity.this, NeighborhoodsActivity.class);
 
                 // Executing intent
                 startActivity(attractionsIntent);
@@ -51,7 +51,7 @@ public class MainActivityMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Creating intent to go to outdoors activity
-                Intent historyIntent = new Intent(MainActivityMain.this, HistoryActivity.class);
+                Intent historyIntent = new Intent(MainActivity.this, HistoryActivity.class);
 
                 // Executing intent
                 startActivity(historyIntent);

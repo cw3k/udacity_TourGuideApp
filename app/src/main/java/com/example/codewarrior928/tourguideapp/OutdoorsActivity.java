@@ -1,15 +1,12 @@
 package com.example.codewarrior928.tourguideapp;
 
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,7 +15,7 @@ public class OutdoorsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_outdoors);
+        setContentView(R.layout.activity_destination);
 
         ArrayList<Destination> destinations = new ArrayList<Destination>();
 
@@ -31,13 +28,18 @@ public class OutdoorsActivity extends AppCompatActivity {
         destinations.add(faneuilHall);
 
         ArrayAdapter<Destination> itemsAdapter = new DestinationAdapter(OutdoorsActivity.this, destinations);
-        ListView outdoorsList = (ListView) findViewById(R.id.outdoorsRootView);
+        ListView outdoorsList = (ListView) findViewById(R.id.destinationRootView);
         outdoorsList.setAdapter(itemsAdapter);
 
         outdoorsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"Hello Javatpoint",Toast.LENGTH_SHORT).show();
+
+                // Creating intent to go to outdoors activity
+                Intent FragmentIntent = new Intent(OutdoorsActivity.this, OutdoorFragmentActivity.class);
+
+                // Executing intent
+                startActivity(FragmentIntent);
             }
         });
     }
